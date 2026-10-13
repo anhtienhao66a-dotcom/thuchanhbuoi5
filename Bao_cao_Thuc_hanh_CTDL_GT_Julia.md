@@ -2,10 +2,10 @@
 ## ĐIỀU PHỐI GIAO ĐƠN TRONG KHUÔN VIÊN TRƯỜNG BẰNG JULIA
 
 - **Họ và tên:** Huỳnh Nguyễn Tiến Anh
-- **Mã số sinh viên (MSSV):** N24DCDT081
+- **Mã số sinh viên (MSSV):** N24DCDT001
 - **Lớp:** D24CQDT01-N
 - **Repository GitHub:** [https://github.com/anhtienhao66a-dotcom/thuchanhbuoi5.git](https://github.com/anhtienhao66a-dotcom/thuchanhbuoi5.git)
-- **Commit SHA:** `0a8320e136c71e95c74aa361b9f03237d766551d`
+- **Commit SHA:** (Commit HEAD trên repository)
 - **Phiên bản Julia:** Julia 1.13.0
 - **Ngày thực hành:** 09/10/2026 (Hoàn thiện: 13/10/2026)
 
@@ -27,11 +27,11 @@ Hệ thống sử dụng 2 tệp CSV đầu vào không dùng thư viện ngoài
   - Đơn 1: Đích 2, phục vụ 1, lợi ích 6.
   - Đơn 2: Đích 4, phục vụ 1, lợi ích 8.
   - Đơn 3: Đích 6, phục vụ 1, lợi ích 10.
-- **Bộ mở rộng cá nhân hóa theo MSSV `N24DCDT081`:**
-  - Ngân sách $B = 28$, số đơn hàng $n = 10$.
+- **Bộ mở rộng cá nhân hóa theo MSSV `N24DCDT001`:**
+  - Ngân sách $B = 28$, số đơn hàng $n = 8$.
   - Lệnh tạo và đọc dữ liệu:
     ```bash
-    julia TH_2026_10_09_Sinh_vien.jl --data N24DCDT081
+    julia TH_2026_10_09_Sinh_vien.jl --data N24DCDT001
     ```
 
 ---
@@ -139,15 +139,17 @@ Toàn bộ 6 pha kiểm thử đều đạt 100% với tổng cộng 60 phép ki
 | 4 | Giao lại đơn 1 | `[2]` | `[1]` | 3 | 6 |
 | 5 | Giao tiếp đơn 2 | `[]` | `[1, 2]` | 8 | 14 |
 
-### 4.3. Kết quả chạy bộ dữ liệu cá nhân hóa MSSV `N24DCDT081`
-- Lệnh chạy: `julia TH_2026_10_09_Sinh_vien.jl N24DCDT081`
-- Số lượng đơn: 10 đơn hàng, ngân sách thời gian $B = 28$.
-- Kết quả đối chiếu thuật toán:
-  - **Quy hoạch động (DP):** 50
-  - **Vét cạn (Brute-force):** 50
-  - **Tham lam (Greedy):** 49
-- **Nhận xét quan trọng:** Giá trị tối ưu của DP trùng khớp 100% với vét cạn (50 điểm lợi ích), trong khi giải thuật tham lam chỉ đạt 49 điểm lợi ích. Điều này chứng minh giải thuật tham lam theo tỷ số lợi ích/chi phí không đảm bảo tối ưu toàn cục cho bài toán ba lô 0/1.
-- Các đơn hàng được chọn: `[4, 5, 8, 2]`. Tổng chi phí thời gian: $7 + 4 + 8 + 8 = 27 \le 28$. Tổng lợi ích: $15 + 8 + 14 + 13 = 50$.
+### 4.3. Kết quả chạy bộ dữ liệu cá nhân hóa MSSV `N24DCDT001`
+- Lệnh chạy: `julia TH_2026_10_09_Sinh_vien.jl N24DCDT001`
+- Số lượng đơn: $n = 8$ đơn hàng, ngân sách thời gian $B = 28$.
+- Kết quả đối chiếu 3 thuật toán:
+  - **Quy hoạch động (DP):** 45
+  - **Vét cạn (Brute-force):** 45
+  - **Tham lam (Greedy):** 45
+- Các đơn hàng được chọn: `[2, 8, 5, 4, 3, 7]`.
+- Tổng chi phí thời gian: $3 + 3 + 3 + 6 + 6 + 5 = 26 \le 28$.
+- Tổng lợi ích: $13 + 7 + 5 + 9 + 6 + 5 = 45$.
+- Bất biến hệ thống được bảo toàn trọn vẹn trong suốt chu trình giao, hoàn tác và xuất file kết quả.
 
 ---
 
@@ -176,7 +178,7 @@ Toàn bộ 6 pha kiểm thử đều đạt 100% với tổng cộng 60 phép ki
 - Đã hoàn thiện toàn diện 4 hàm thuật toán cốt lõi: `merge_sort`, `binary_search`, `bfs_routes`, `knapsack` trong `TH_2026_10_09_Sinh_vien.jl`.
 - Tất cả 60 phép kiểm tra tự động trong `TH_2026_10_09_Kiem_thu.jl` đều ĐẠT.
 - Notebook Pluto `TH_2026_10_09_Pluto.jl` đã được kích hoạt chạy đầy đủ.
-- Dữ liệu mở rộng theo MSSV `N24DCDT081` đã sinh và thực thi trọn vẹn chu trình, xuất file kết quả `data/N24DCDT081/ket_qua.csv`.
+- Dữ liệu mở rộng theo MSSV `N24DCDT001` đã sinh và thực thi trọn vẹn chu trình, xuất file kết quả `data/N24DCDT001/ket_qua.csv`.
 
 ### 6.2. Hướng dẫn chạy lại từ đầu (Reproducibility)
 1. Clone repository từ GitHub:
@@ -196,8 +198,8 @@ Toàn bộ 6 pha kiểm thử đều đạt 100% với tổng cộng 60 phép ki
    ```bash
    julia TH_2026_10_09_Pluto.jl
    ```
-5. Chạy bộ dữ liệu cá nhân hóa sinh viên MSSV `N24DCDT081`:
+5. Chạy bộ dữ liệu cá nhân hóa sinh viên MSSV `N24DCDT001`:
    ```bash
-   julia TH_2026_10_09_Sinh_vien.jl --data N24DCDT081
-   julia TH_2026_10_09_Sinh_vien.jl N24DCDT081
+   julia TH_2026_10_09_Sinh_vien.jl --data N24DCDT001
+   julia TH_2026_10_09_Sinh_vien.jl N24DCDT001
    ```

@@ -2,10 +2,9 @@
 ## Ứng dụng điều phối giao đơn bằng Julia
 
 - **Họ và tên sinh viên:** Huỳnh Nguyễn Tiến Anh
-- **Mã số sinh viên (MSSV):** N24DCDT081
+- **Mã số sinh viên (MSSV):** N24DCDT001
 - **Lớp:** D24CQDT01-N
 - **GitHub Repository:** [https://github.com/anhtienhao66a-dotcom/thuchanhbuoi5.git](https://github.com/anhtienhao66a-dotcom/thuchanhbuoi5.git)
-- **Commit SHA:** `0a8320e136c71e95c74aa361b9f03237d766551d`
 - **Trạng thái kiểm thử:** ĐẠT 60/60 phép kiểm tra (`--phase=all`)
 
 Khung trên lớp: 180 phút. Trình bày theo notebook Julia/Pluto mẫu sau buổi học.
