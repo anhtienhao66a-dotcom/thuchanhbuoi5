@@ -5,6 +5,7 @@
 - **Mã số sinh viên (MSSV):** N24DCDT081
 - **Lớp:** D24CQDT01-N
 - **Repository GitHub:** [https://github.com/anhtienhao66a-dotcom/thuchanhbuoi5.git](https://github.com/anhtienhao66a-dotcom/thuchanhbuoi5.git)
+- **Commit SHA:** `0a8320e136c71e95c74aa361b9f03237d766551d`
 - **Phiên bản Julia:** Julia 1.13.0
 - **Ngày thực hành:** 09/10/2026 (Hoàn thiện: 13/10/2026)
 
